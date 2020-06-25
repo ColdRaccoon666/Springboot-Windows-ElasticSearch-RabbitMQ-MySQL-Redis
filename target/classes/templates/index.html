@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<form action="/queryStu" method="post">
+    <input name="studentId" type="text" placeholder="学生id" required/>
+    <input type="submit" value="查看学生">
+</form>
+<hr color="red">
+<br>
+<br>
+<form action="/findTestLike" method="post">
+    <input name="studentName" type="text" placeholder="学生姓名" required/>
+    <input type="submit" value="模糊查看学生">
+</form>
+<br>
+<hr color="red">
+<form action="/addStudent" method="post">
+    <input name="studentId" type="text" placeholder="学生id required"/>
+    <input name="studentName" type="text" placeholder="学生名" required/>
+    <input type="submit" value="增加学生">
+</form>
+<br>
+<br>
+<hr color="blue">
+<a th:href="@{'/get'}" th:text="查看全部学生..."></a>
+<hr color="red">
+<br>
+<br>
+<form action="/delStu" method="post">
+    <input name="studentId" type="text" placeholder="学生id" required/>
+    <input type="submit" value="删除学生">
+</form>
+<hr color="blue">
+<br>
+<br>
+<br>
+<form action="/amendStu" method="post">
+    <input name="studentId" type="text" placeholder="学生id required"/>
+    <input name="studentName" type="text" placeholder="学生名" required/>
+    <input type="submit" value="修改学生">
+</form>
+<br>
+<br>
+<hr color="green">
+<a href="/qidong">启动</a>
+<hr color="red">
+<!--<a th:text="${work}"></a>-->
+<br>
+<a th:text="${msg}"></a>
+</body>
+</html>
